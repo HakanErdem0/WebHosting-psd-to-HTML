@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+.divider{
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+    position: relative;
+    clear: both;
+}
+
+.divider:after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    /* transform: translate(-50%, -50%); */
+    background: #fff;
+    font-size: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+::-webkit-scrollbar-track-piece {
+    border: 1px solid #ccc;
+}
+
+/*Navbar start*/
+
+.container{
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.d-flex{
+    display: flex;
+}
+
+/*
+.red-border{
+    border: 1px solid darkred;
+}
+ */
+
+header{
+    width: 100%;
+    height: 130px;
+    background-color: #0d0d0d;
+    display: block;
+}
+
+header a.logo{
+    width: 252px;
+    height: 85px;
+    display: inline-block;
+    margin-top: 20px;
+    float: left;
+}
+
+header > a.logo img{
+
+    width: 100%;
+}
+
+header .menu{
+
+    width: calc(100% - 252px);
+    height: 85px;
+    display: inline-block;
+    margin-top: 37px;
+    float: right;
+    padding-top: 20px;
+}
+
+header .menu ul{
+
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+}
+
+header .menu ul li{
+    position: relative;
+
+}
+
+header .menu ul a{
+
+    color: #727171;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 0 10px;
+}
+
+header .menu ul li a:hover{
+    color: #fff;
+}
+
+
+header .menu ul li::after{
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 1px;
+    width: 2px;
+    height: 100%;
+    background-color: #2e2e2e;
+}
+
+header .menu ul li:last-child:after{
+
+    display: none;
+}
+
+/*Navbar end*/
+
+/* Slider start */
+
+main .slider {
+    width: 100%;
+    height: 360px;
+    position: relative;
+    background-image: url(../img/slider-bg.webp);
+    border-top: 1px solid #ffffff;
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+main .slider .slider_content_img {
+	padding-right: 50px;
+	float: right;
+}
+
+main section.slider .slider-btn{
+    position: absolute;
+    bottom: 30px;
+    left: 30%;
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 134px;
+    height: 26px;
+    font-size: 19px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+    font-weight: 400;
+}
+
+main section.slider .slider-btn:hover{
+    transition: 0.5s;
+    background-color: #081322;
+    color: #fff;
+    border-bottom-right-radius: 20px ;
+    border-top-left-radius: 20px ;
+}
+
+/* Slider End */
+
+/* Services Start */
+
+section#services{
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+
+section#services .services-item{
+    width: calc(100% / 4);
+    float: left;
+    padding: 20px 0;
+    overflow: hidden;
+    display: block;
+
+}
+
+section#services .services-item h4{
+    height: 40px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #343434;
+}
+
+section#services .services-item h4 i{
+    color: #343434;
+}
+
+section#services .services-item button{
+    width: 110px;
+    height: 22px;
+    border-radius: 30px;
+    border: none;
+    color: #e5e5e5;
+}
+
+section#services .services-item button:hover{
+    border-top-right-radius: 20px ;
+    border-bottom-left-radius: 20px;
+    background-color: #cfcfcf;
+}
+
+section#services .services-item button a:last-child:hover{
+    color: #426ba3;
+}
+
+section#services .services-item a:last-child{
+    text-decoration: none;
+    color: #919191;
+}
+
+section#services .services-item a:hover{
+    color: #121212;
+    text-decoration: none;
+}
+
+section#services .services-item a{
+    color: #426ba3;
+}
+
+section#services .services-item span.subname{
+    color: black;
+    font-size: 14px;
+    width: 100%;
+}
+
+section#services .services-item ul.services-list{
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+
+}
+
+section#services .services-item ul.services-list li{
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 30px;
+}
+
+section#services .services-item ul.services-list li.active{
+    color: #426ba3;
+    font-weight: bold;
+}
+
+section#services .services-item ul.services-list li i{
+    margin-right: 10px;
+
+}
+
+/* Service banner start */
+
+.services-banner-outher{
+    display: flex;
+    width: 90%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+section#services .services-banner{
+  width: 50%;
+  height: 100px;
+  border: 6px solid #e3e3e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 25px;
+}
+
+section#services .services-banner .services-banner-left{
+    width: 70%;
+    padding-left: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+section#services .services-banner .services-banner-left h2{
+    font-size: 20px;
+    font-family: Arial;
+    font-style: italic;
+    font-weight: bold;
+}
+
+section#services .services-banner .services-banner-left ul{
+    list-style: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid;
+}
+
+section#services .services-banner .services-banner-left ul li{
+    font-size: 16px;
+    padding: 3px 10px;
+
+
+}
+
+section#services .services-banner .services-banner-right{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+section#services .services-banner .services-banner-right .price-label{
+    background: #eaeaea;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+section#services .services-banner .services-banner-right .price-label p{
+    font-size: 12px;
+    color: #a0a0a0;
+}
+
+section#services .services-banner .services-banner-right .price-label span{
+    color: #545454;
+    font-size: 20px;
+
+}
+
+section#services .services-banner .services-banner-right .price-label span i{
+    color: #a0a0a0;
+    font-size: 20px;
+}
+
+section#services .services-banner .services-banner-right .price-label span b{
+    color: #a0a0a0;
+    font-size: 15px;
+}
+
+/* Footer Start */
+
+footer.footer-area{
+    background: #252525;
+    min-height: 200px;
+    margin-top: 40px;
+}
+
+footer.footer-area .footer-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+
+.footer-inner .footer-item h3{
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    border-bottom: 1px solid #aaaaaa;
+    margin-bottom: 10px;
+
+}
+
+.footer-inner .footer-item p{
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 30px;
+}
+
+.footer-inner .footer-item p i{
+    color: #cfcfcf;
+}
+
+.footer-inner .footer-item p:hover i{
+    animation-name: icon_animate;
+    color: #ffffff;
+    text-decoration: none;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    position: relative;
+    left: 0;
+}
+
+@keyframes icon_animate {
+    from {left: 0px;}
+    to {left: 10px;}
+}
+
+/*Footer End*/
+
+/*Footer Band start*/
+
+footer .footer-bottom{
+    background-color: #0d0d0d;
+    height: 50px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+
+}
+
+footer .footer-bottom a{
+    padding-left: 10px;
+    text-decoration: none;
+    color: #426ba3;
+    font-size: 14px;
+}
+
+footer .footer-bottom a:hover{
+    color: #cfcfcf;
+}
